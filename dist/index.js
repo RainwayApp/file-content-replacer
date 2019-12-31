@@ -68,9 +68,11 @@ async function run() {
             console.log(`found file ${filename} and now setting version ${version}`);
             try {
                 let content = await fs.promises.readFile(filename, "utf-8");
-                content.replace('^\[assembly:\s*AssemblyVersion\(".*"\)]$',`[assembly: AssemblyVersion("${version}")]`);
-                content.replace('^\[assembly:\s*AssemblyFileVersion\(".*"\)]$',`[assembly: AssemblyFileVersion("${version}")]`);
-                await fs.promises.writeFile(filename,context);
+                content=content.replace(/\[assembly:\s*AssemblyVersion\(".*"\)]/g,`[assembly: AssemblyVersion("${version}")]`)
+                    .replace(/\[assembly:\s*AssemblyFileVersion\(".*"\)]/g,`[assembly: AssemblyFileVersion("${version}")]`);
+                
+                await fs.promises.writeFile(filename,content);
+                
                  
             } catch (err) {
                 core.setFailed(err.message);
