@@ -1,0 +1,33 @@
+{
+  "name": "set-assembly-version",
+  "version": "1.0.0",
+  "description": "Sets the AssemblyInfo Build number",
+  "main": "index.js",
+  "scripts": {
+    "package": "ncc build index.js -o dist",
+    "test": "eslint index.js && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rshillington/set-assembly-version.git"
+  },
+  "author": "Ralph Shillington",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rshillington/set-assembly-version/issues"
+  },
+  "homepage": "https://github.com/rshillington/set-assembly-version#readme",
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.0"
+  }
+}

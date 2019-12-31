@@ -1,0 +1,14 @@
+name: 'AssemblyVersion Updater'
+description: 'Sets the AssemblyVersion and AssemblyFileVerion with the supplied BuildNumber'
+inputs:
+  filename:
+    description: "The name of the file"
+    required: true
+    default: 'Properties\\AssemblyInfo.cs'
+  version:
+    description: 'the new Version Number to assign'
+    required: true
+    default: '1.0.0.0'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
