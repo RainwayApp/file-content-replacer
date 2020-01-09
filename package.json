@@ -1,7 +1,7 @@
 {
   "name": "set-assembly-version",
   "version": "1.0.0",
-  "description": "Sets the AssemblyInfo Build number",
+  "description": "Wraps replace-in-files for github actions",
   "main": "index.js",
   "scripts": {
     "package": "ncc build index.js -o dist",
@@ -28,6 +28,7 @@
     "jest": "^24.9.0"
   },
   "dependencies": {
-    "@actions/core": "^1.2.0"
+    "@actions/core": "^1.2.0",
+    "replace-in-file": "^5.0.2"
   }
 }
