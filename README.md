@@ -28,7 +28,7 @@ jobs:
       uses: rshillington/find-content-replacer@master
       with:
         files: "**/*.csproj"
-        from: "<AssemblyVersion>[0-9\.]+<\/AssemblyVersion>"
+        from: "<AssemblyVersion>[0-9\\.]+<\/AssemblyVersion>"
         to: "<AssemblyVersion>1.0.0.${{ env.BUILD_NUMBER}}</AssemblyVersion>"
 
 ```
