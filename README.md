@@ -25,7 +25,7 @@ jobs:
         token: ${{secrets.github_token}}
 
     - name: Update project file
-      uses: rshillington/find-content-replacer@master
+      uses: rshillington/file-content-replacer@master
       with:
         files: "**/*.csproj"
         from: "<AssemblyVersion>[0-9\\.]+<\/AssemblyVersion>"
